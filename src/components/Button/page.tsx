@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import { ButtonStyled } from './styled';
 
 interface ButtonProps {
@@ -29,7 +30,7 @@ const Button = ({
   return (
     <ButtonStyled
       type="button"
-      className={(active ? 'choice' : '')}
+      className={clsx(active ? 'choice' : '')}
       width={width}
       height={height}
       padding={padding}
