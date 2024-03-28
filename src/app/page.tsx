@@ -9,18 +9,19 @@ import { UserOutlined } from '@ant-design/icons';
 import Button from '@/components/Button/page';
 import shake from '../../public/images/shake.png';
 import weights from '../../public/images/weights.png';
-import dumbell from '../../public/images/dumbell.png';
+import dumbbell from '../../public/images/dumbbell.png';
 import abs from '../../public/images/abs.png';
 import arm from '../../public/images/arm.png';
 import heart from '../../public/images/heart.png';
+import ReviewPost from '@/components/ReviewPost/page';
 
 const powderFilterData = [
   { label: '전체', value: 'all', img: shake },
   { label: '국내 제품', value: 'domestic', img: weights },
-  { label: '해외 제품', value: 'overseas', img: dumbell },
-  { label: '댓글 많은 제품', value: 'comment', img: abs },
-  { label: '좋아요 많은 제품', value: 'good', img: arm },
-  { label: '원하는 조건으로 찾기', value: 'find', img: heart },
+  { label: '해외 제품', value: 'overseas', img: dumbbell },
+  { label: '댓글 순', value: 'comment', img: abs },
+  { label: '좋아요 순', value: 'good', img: arm },
+  { label: '내맘대로 찾기', value: 'find', img: heart },
 ];
 
 export default function Home() {
@@ -45,6 +46,7 @@ export default function Home() {
         </div>
         <div className="reviewTitleBox">
           <p className="reviewTitle">지금 뜨는 후기🔥</p>
+          <ReviewPost />
         </div>
       </main>
     </HomeStyled>
